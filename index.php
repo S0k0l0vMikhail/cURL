@@ -68,11 +68,8 @@ function get_token($curl, $url, $cookie) {
         } else {
                 return false;
         }
-    //return substr($response, 9802);
-    //return (preg_match('/<a class="btn btn-yellow js-employee-get-selfie"/s', $response));
     };
 
-    //btn btn-yellow js-employee-get-selfie
     
     for ($i = 0; $i <= 4; $i++) {
         $login = users[$i]['login'];
@@ -92,11 +89,3 @@ function get_token($curl, $url, $cookie) {
     }
 ?>
 
-<style>
-    .js-popup.l-popup.opened{
-        display: none !important;
-    }
-    .l-topline.js-topline{
-        display: none !important;
-    }
-</style>

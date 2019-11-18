@@ -1,6 +1,6 @@
 <?php
 
-require_once('/var/www/u0751779/data/www/xn--80aaazcqrjaj0g.xn--p1acf/src/config.php');
+require_once(); //config.php
 
 
 function get_token($curl, $url, $cookie) {

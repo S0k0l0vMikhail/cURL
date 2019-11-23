@@ -76,10 +76,10 @@ function get_token($curl, $url, $cookie) {
         $password = users[$i]['pwd'];
         $curl = curl_init();
         $cookie_file = realpath("cookie.txt");
-        $url = 'https://igooods.ru/employee/sign_in';
-        $newUrl = "http://igooods.ru/employee/confirm";
-        $ready = "https://igooods.ru/employee/confirm?confirm=true";
-        $csrf_token = get_token($curl, 'https://igooods.ru/employee/sign_in/',$cookie_file);
+        $url = ''; // from config
+        $newUrl = ""; // from config
+        $ready = ""; // from config
+        $csrf_token = get_token($curl, $url,$cookie_file);
         $post = 'utf8=✓&authenticity_token='.$csrf_token.'&employee[login]='.$login.'&employee[password]='.$password.'';
         auth($curl, $url, $cookie_file, $post, $csrf_token);
         if (ready($curl, $ready, $newUrl, $cookie_file)){
